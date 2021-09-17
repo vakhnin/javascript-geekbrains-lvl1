@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 2 задание 4</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        /*
+        Реализовать основные 4 арифметические операции (+, -, /, *) в виде функций с двумя
+        параметрами. Т.е. например, функция для сложения должна принимать два числа, складывать их
+        и возвращать результат.
+        Обязательно использовать оператор return.
+        */
+
+        /**
+         * Функция сложения чисел a и b
+         * @throw один из параметров не является числом
+         * @param {Number} a 
+         * @param {Number} b 
+         * @returns Number
+         */
+        function add(a, b) {
+            if (typeof(a) != "number") {
+                throw "Error: param a is no a number";
+            }
+            if (typeof(b) != "number") {
+                throw "Error: param b is no a number";
+            }
+            return a + b;
+        }
+
+        /**
+         * Функция вычитания чисел a и b
+         * @throw один из параметров не является числом
+         * @param {Number} a 
+         * @param {Number} b 
+         * @returns Number
+         */
+        function sub(a, b) {
+            if (typeof(a) != "number") {
+                throw "Error: param a is no a number";
+            }
+            if (typeof(b) != "number") {
+                throw "Error: param b is no a number";
+            }
+            return a - b;
+        }
+
+        /**
+         * Функция умножения чисел a и b
+         * @throw один из параметров не является числом
+         * @param {Number} a 
+         * @param {Number} b 
+         * @returns Number
+         */
+        function mult(a, b) {
+            if (typeof(a) != "number") {
+                throw "Error: param a is no a number";
+            }
+            if (typeof(b) != "number") {
+                throw "Error: param b is no a number";
+            }
+            return a * b;
+        }
+
+        /**
+         * Функция деления чисел a и b
+         * @throw один из параметров не является числом
+         * @param {Number} a 
+         * @param {Number} b 
+         * @returns Number
+         */
+        function div(a, b) {
+            if (typeof(a) != "number") {
+                throw "Error: param a is no a number";
+            }
+            if (typeof(b) != "number") {
+                throw "Error: param b is no a number";
+            }
+            return a / b;
+        }
+
+        // Проверяем функции
+        let a = 10, b = 4;
+        let res = add(a, b);
+        console.log(`${a} + ${b} = ${res}`);
+
+        res = sub(a, b);
+        console.log(`${a} - ${b} = ${res}`);
+
+        res = mult(a, b);
+        console.log(`${a} * ${b} = ${res}`);
+
+        res = div(a, b);
+        console.log(`${a} / ${b} = ${res}`);
+
+        // Проверяем исключение
+        add(1.1, "abc");
+    </script>
+</body>
+</html>
