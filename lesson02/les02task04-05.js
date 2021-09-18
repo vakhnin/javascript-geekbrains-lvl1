@@ -8,10 +8,10 @@
  * @returns Number
  */
 function add(a, b) {
-    if (typeof(a) != "number") {
+    if (typeof (a) != "number") {
         throw "Error: param a is no a number";
     }
-    if (typeof(b) != "number") {
+    if (typeof (b) != "number") {
         throw "Error: param b is no a number";
     }
     return a + b;
@@ -25,10 +25,10 @@ function add(a, b) {
  * @returns Number
  */
 function sub(a, b) {
-    if (typeof(a) != "number") {
+    if (typeof (a) != "number") {
         throw "Error: param a is no a number";
     }
-    if (typeof(b) != "number") {
+    if (typeof (b) != "number") {
         throw "Error: param b is no a number";
     }
     return a - b;
@@ -42,10 +42,10 @@ function sub(a, b) {
  * @returns Number
  */
 function mult(a, b) {
-    if (typeof(a) != "number") {
+    if (typeof (a) != "number") {
         throw "Error: param a is no a number";
     }
-    if (typeof(b) != "number") {
+    if (typeof (b) != "number") {
         throw "Error: param b is no a number";
     }
     return a * b;
@@ -59,10 +59,10 @@ function mult(a, b) {
  * @returns Number
  */
 function div(a, b) {
-    if (typeof(a) != "number") {
+    if (typeof (a) != "number") {
         throw "Error: param a is no a number";
     }
-    if (typeof(b) != "number") {
+    if (typeof (b) != "number") {
         throw "Error: param b is no a number";
     }
     return a / b;
