@@ -32,29 +32,11 @@
         }
 
         // Проверяем
-        let prod1 = new Product("Продукт1", 200);
-        console.log(prod1);
-        prod1.make25PercentDiscount();
-        console.log(prod1);
-
-        /* es6 */
-        class ProductEs6 {
-            constructor(name, price) {
-                this.name = name;
-                this.price = price;
-            }
-
-            make25PercentDiscounEs61() {
-                this.price -= this.price * 25 / 100;
-            }
-
-        }
-
-        // Проверяем
-        let prod2 = new ProductEs6("Продукт2", 400);
-        console.log(prod2);
-        prod2.make25PercentDiscounEs61();
-        console.log(prod2);
+        let prod = new Product("Продукт1", 200);
+        let prod_copy = Object.assign(prod); // Делаем копию исходного объекта, для проверки
+        console.log(prod_copy);
+        prod.make25PercentDiscount();
+        console.log(prod);
     </script>
 </body>
 
