@@ -33,8 +33,8 @@
 
         // Проверяем
         let prod = new Product("Продукт1", 200);
-        let prod_copy = Object.assign(prod); // Делаем копию исходного объекта, для проверки
-        console.log(prod_copy);
+        console.log(prod);
+        prod = new Product("Продукт1", 200);
         prod.make25PercentDiscount();
         console.log(prod);
     </script>
