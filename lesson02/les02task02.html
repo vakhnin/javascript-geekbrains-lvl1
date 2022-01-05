@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 2 задание 2</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        /*
+        Чему будут равны переменные x и a в примере ниже? Написать почему так произошло 
+        (описать последовательность действий).
+        */
+
+        /*
+        1. присваиваем a значение 2
+        */
+       let a = 2;
+       /*
+       1. значение a (2) умножаем на 2 (результат 4)
+       2. результат из пункта 1. присваиваем переменной a (4)
+       3. вычитаем из 1 результат присваивания из пункта 2., результат -3
+       4. переменной x присваиваем результат из пункта 3. (-3)
+       */
+       let x = 1 - (a *= 2);
+       console.log(a); // 4
+       console.log(x); // -3
+    </script>
+</body>
+</html>
