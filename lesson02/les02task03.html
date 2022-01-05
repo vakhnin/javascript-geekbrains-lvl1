@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Урок 2 задание 3</title>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        /*
+        Объявить две переменные a и b и задать им целочисленные произвольные начальные значения.
+
+        Затем написать скрипт, который работает по следующему принципу:
+        - если a и b положительные, вывести их разность (ноль можно считать положительным числом);
+        - если а и b отрицательные, вывести их произведение;
+        - * (этот пункт по сложнее, делайте по желанию) если а и b разных знаков, вывести их сумму;
+        */
+
+        let a = 3;
+        let b = 4;
+          
+        /**
+         * Функция обработки данных:
+         *  if a, b >= 0 (a - b), 
+         *  if a, b < 0 (a * b),
+         *  else (a + b)
+         * @param {Number} a 
+         * @param {Number} b 
+         * @returns Number
+         */
+        function numbersManipulation(a, b) {
+            // По условиям задачи 0 положительное число, поэтому убираем знак у 0
+            // (и 0 и -0 положительны)
+            a = a ? a : 0
+            b = b ? b : 0
+
+            // Разбираем случаи
+            if (a >= 0 && b >= 0) { // a и b положительные                
+                return a - b;              
+            }
+            else if (a < 0 && b < 0) { // а и b отрицательные
+                return a * b;
+            }
+            else { // остается только случай, когда a и b разных знаков
+                return a + b;  
+            }
+        }
+
+        // Проверяем основные случаи
+        let res = numbersManipulation(a, b);
+        console.log(`numbersManipulation(${a},${b}) = ${res}`) // -1
+
+        a = -3, b = -4;
+        res = numbersManipulation(a, b);
+        console.log(`numbersManipulation(${a},${b}) = ${res}`) // 12
+
+        a = -3, b = 4;
+        res = numbersManipulation(a, b);
+        console.log(`numbersManipulation(${a},${b}) = ${res}`) // 1
+
+        // Проверяем случаи с нулем
+        a = 4, b = 0;
+        res = numbersManipulation(a, b);
+        console.log(`numbersManipulation(${a},${b}) = ${res}`) // 4
+
+        a = 0, b = 3;
+        res = numbersManipulation(a, b);
+        console.log(`numbersManipulation(${a},${b}) = ${res}`) // -3
+        
+        a = -5, b = 0;
+        res = numbersManipulation(a, b);
+        console.log(`numbersManipulation(${a},${b}) = ${res}`) // -5
+        
+        a = -0, b = 3;
+        res = numbersManipulation(a, b);
+        console.log(`numbersManipulation(${a},${b}) = ${res}`) // -3
+        
+        a = -0, b = -6;
+        res = numbersManipulation(a, b);
+        console.log(`numbersManipulation(${a},${b}) = ${res}`) // -6
+        
+        a = -6, b = 0;
+        res = numbersManipulation(a, b);
+        console.log(`numbersManipulation(${a},${b}) = ${res}`) // -6
+
+
+    </script>
+</body>
+</html>
